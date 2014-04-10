@@ -76,8 +76,9 @@
 
 -(void) registerAllUserInterface
 {
-    self.nextGesture.enabled=YES;
     self.nextImage.hidden=NO;
+    self.lastImage.hidden=NO;
+    self.lastButton.enabled=YES;
     [self shine:self.nextImage];
     
     [self shine:self.lastImage];

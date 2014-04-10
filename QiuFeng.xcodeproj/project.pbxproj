@@ -28,6 +28,10 @@
 		249879BB18F42FDF00253112 /* ProjectTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 249879BA18F42FDF00253112 /* ProjectTableViewCell.m */; };
 		249879BE18F4312C00253112 /* Project.m in Sources */ = {isa = PBXBuildFile; fileRef = 249879BD18F4312C00253112 /* Project.m */; };
 		249879C118F4346E00253112 /* ProjectClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 249879C018F4346E00253112 /* ProjectClient.m */; };
+		249879C418F48C0400253112 /* AboutMe.m in Sources */ = {isa = PBXBuildFile; fileRef = 249879C318F48C0400253112 /* AboutMe.m */; };
+		249879CB18F498C900253112 /* ExperienceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 249879CA18F498C900253112 /* ExperienceCell.m */; };
+		249879CE18F49F4900253112 /* Experience.m in Sources */ = {isa = PBXBuildFile; fileRef = 249879CD18F49F4900253112 /* Experience.m */; };
+		249879D118F49FC600253112 /* ExperienceClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 249879D018F49FC600253112 /* ExperienceClient.m */; };
 		24B48F9D18F1A15100ACCB7C /* GithubAnalyse.m in Sources */ = {isa = PBXBuildFile; fileRef = 24B48F9C18F1A15100ACCB7C /* GithubAnalyse.m */; };
 		24B48FA018F1A40D00ACCB7C /* PieChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 24B48F9F18F1A40D00ACCB7C /* PieChart.m */; };
 		24C13AEC18F25129009C005A /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 24C13AC818F25129009C005A /* AFHTTPRequestOperation.m */; };
@@ -98,6 +102,14 @@
 		249879BD18F4312C00253112 /* Project.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Project.m; sourceTree = "<group>"; };
 		249879BF18F4346E00253112 /* ProjectClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProjectClient.h; sourceTree = "<group>"; };
 		249879C018F4346E00253112 /* ProjectClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProjectClient.m; sourceTree = "<group>"; };
+		249879C218F48C0400253112 /* AboutMe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutMe.h; sourceTree = "<group>"; };
+		249879C318F48C0400253112 /* AboutMe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutMe.m; sourceTree = "<group>"; };
+		249879C918F498C900253112 /* ExperienceCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExperienceCell.h; sourceTree = "<group>"; };
+		249879CA18F498C900253112 /* ExperienceCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExperienceCell.m; sourceTree = "<group>"; };
+		249879CC18F49F4900253112 /* Experience.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Experience.h; sourceTree = "<group>"; };
+		249879CD18F49F4900253112 /* Experience.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Experience.m; sourceTree = "<group>"; };
+		249879CF18F49FC600253112 /* ExperienceClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExperienceClient.h; sourceTree = "<group>"; };
+		249879D018F49FC600253112 /* ExperienceClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExperienceClient.m; sourceTree = "<group>"; };
 		24B48F9B18F1A15100ACCB7C /* GithubAnalyse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GithubAnalyse.h; sourceTree = "<group>"; };
 		24B48F9C18F1A15100ACCB7C /* GithubAnalyse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GithubAnalyse.m; sourceTree = "<group>"; };
 		24B48F9E18F1A40D00ACCB7C /* PieChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PieChart.h; sourceTree = "<group>"; };
@@ -216,6 +228,7 @@
 		2417086418F1172C003787EA /* QiuFeng */ = {
 			isa = PBXGroup;
 			children = (
+				249879C518F48C0A00253112 /* AboutMe */,
 				2487192B18F3F59500F10DFA /* Projects */,
 				2403C7FC18F2F53E007078D2 /* Usage */,
 				24C13AC518F25129009C005A /* AFNetworking */,
@@ -290,6 +303,21 @@
 				249879C018F4346E00253112 /* ProjectClient.m */,
 			);
 			name = Projects;
+			sourceTree = "<group>";
+		};
+		249879C518F48C0A00253112 /* AboutMe */ = {
+			isa = PBXGroup;
+			children = (
+				249879C218F48C0400253112 /* AboutMe.h */,
+				249879C318F48C0400253112 /* AboutMe.m */,
+				249879C918F498C900253112 /* ExperienceCell.h */,
+				249879CA18F498C900253112 /* ExperienceCell.m */,
+				249879CC18F49F4900253112 /* Experience.h */,
+				249879CD18F49F4900253112 /* Experience.m */,
+				249879CF18F49FC600253112 /* ExperienceClient.h */,
+				249879D018F49FC600253112 /* ExperienceClient.m */,
+			);
+			name = AboutMe;
 			sourceTree = "<group>";
 		};
 		24B48F9A18F1A11800ACCB7C /* GithubAnalyse */ = {
@@ -510,6 +538,7 @@
 				24C13AEC18F25129009C005A /* AFHTTPRequestOperation.m in Sources */,
 				24C13AFA18F25129009C005A /* UIButton+AFNetworking.m in Sources */,
 				24C13AEF18F25129009C005A /* AFNetworkReachabilityManager.m in Sources */,
+				249879CE18F49F4900253112 /* Experience.m in Sources */,
 				24C13B0718F26FED009C005A /* UIColor+ColorArray.m in Sources */,
 				24C13AFC18F25129009C005A /* UIProgressView+AFNetworking.m in Sources */,
 				24C13AF418F25129009C005A /* AFURLSessionManager.m in Sources */,
@@ -527,13 +556,16 @@
 				2403C7F818F291C9007078D2 /* BarEvent.m in Sources */,
 				24C13AF918F25129009C005A /* UIAlertView+AFNetworking.m in Sources */,
 				24C13AED18F25129009C005A /* AFHTTPRequestOperationManager.m in Sources */,
+				249879CB18F498C900253112 /* ExperienceCell.m in Sources */,
 				24C13AF018F25129009C005A /* AFSecurityPolicy.m in Sources */,
 				24B48FA018F1A40D00ACCB7C /* PieChart.m in Sources */,
 				249879B818F42F6B00253112 /* ProjectTableViewController.m in Sources */,
 				2487192A18F3E90900F10DFA /* NSString+Github.m in Sources */,
 				2417086B18F1172C003787EA /* main.m in Sources */,
+				249879C418F48C0400253112 /* AboutMe.m in Sources */,
 				24C13AFD18F25129009C005A /* UIWebView+AFNetworking.m in Sources */,
 				24C13AEE18F25129009C005A /* AFHTTPSessionManager.m in Sources */,
+				249879D118F49FC600253112 /* ExperienceClient.m in Sources */,
 				24C13AF818F25129009C005A /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				24C13AF718F25129009C005A /* AFNetworkActivityIndicatorManager.m in Sources */,
 				249879BB18F42FDF00253112 /* ProjectTableViewCell.m in Sources */,

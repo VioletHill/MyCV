@@ -14,6 +14,7 @@
 
 @property (weak, nonatomic) IBOutlet UIImageView *iconImageView;
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *state;
 
 -(void) setCellWithProject:(Project*)project;
 

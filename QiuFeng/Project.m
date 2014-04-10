@@ -19,6 +19,7 @@
         self.iconAddress=dictionary[@"iconAddress"];
         self.itunesLink=dictionary[@"itunesLink"];
         self.description=dictionary[@"description"];
+        self.state=dictionary[@"state"];
     }
     return self;
 }

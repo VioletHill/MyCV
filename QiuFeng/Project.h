@@ -36,6 +36,11 @@
  */
 @property (nonatomic,strong) NSString* itunesLink;
 
+/**
+ *  状态 相当于hint
+ */
+@property (nonatomic,strong) NSString* state;
+
 -(instancetype) initWithDictionary:(NSDictionary*)dictionary;
 
 @end

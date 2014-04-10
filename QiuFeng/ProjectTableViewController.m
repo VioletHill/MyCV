@@ -9,8 +9,9 @@
 #import "ProjectTableViewController.h"
 #import "ProjectClient.h"
 #import "Project.h"
+#import "ProjectTableViewCell.h"
 
-@interface ProjectTableViewController ()
+@interface ProjectTableViewController ()<UIAlertViewDelegate>
 
 @property (nonatomic,strong) NSMutableArray* data;
 
@@ -38,6 +39,15 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
+-(NSMutableArray*) data
+{
+    if (_data==nil)
+    {
+        _data=[[NSMutableArray alloc] init];
+    }
+    return _data;
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -61,13 +71,26 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString* identifier=@"ProjectTableViewCell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier forIndexPath:indexPath];
-    
+    ProjectTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier forIndexPath:indexPath];
+    [cell setCellWithProject:self.data[indexPath.row]];
     // Configure the cell...
     
     return cell;
 }
 
+-(void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    Project* project=self.data[indexPath.row];
+    if ([project.state isEqual:@"已经上架"])
+    {
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:project.itunesLink]];
+    }
+    else
+    {
+        UIAlertView* alertView=[[UIAlertView alloc] initWithTitle:@"亲 该应用还没来得急上架哦~~" message:nil delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+        [alertView show];
+    }
+}
 
 /*
 // Override to support conditional editing of the table view.
@@ -125,7 +148,10 @@
     [[ProjectClient sharedProjectClient] getDataFromServer:^(NSArray* result, NSError* error){
         if (error)
         {
-            
+            UIAlertView* alertView=[[UIAlertView alloc] initWithTitle:@"获取信息错误" message:@"获取信息错误 检查网路是否正常,如果一切正常 尽快联系我哦~~" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+            alertView.delegate=self;
+            [alertView show];
+
         }
         else
         {
@@ -134,8 +160,17 @@
                 Project* project=[[Project alloc] initWithDictionary:dic];
                 [self.data addObject:project];
             }
+            [self.tableView reloadData];
         }
     }];
 }
+
+#pragma mark - alertview delegate
+
+-(void) alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex  //网络错误
+{
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
 
 @end

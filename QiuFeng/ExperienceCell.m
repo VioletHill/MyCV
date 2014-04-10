@@ -1,16 +1,19 @@
 //
-//  ProjectTableViewCell.m
+//  ExperienceCell.m
 //  QiuFeng
 //
-//  Created by 邱峰 on 4/8/14.
+//  Created by 邱峰 on 4/9/14.
 //  Copyright (c) 2014 TongjiUniversity. All rights reserved.
 //
 
-#import "ProjectTableViewCell.h"
-#import "AFNetworking.h"
-#import "UIImageView+AFNetworking.h"
+#import "ExperienceCell.h"
 
-@implementation ProjectTableViewCell
+@interface ExperienceCell ()
+
+@end
+
+
+@implementation ExperienceCell
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
@@ -33,11 +36,15 @@
     // Configure the view for the selected state
 }
 
--(void) setCellWithProject:(Project *)project
+-(void) setCellWithTitle:(NSString *)title andSubtitle:(NSString *)subTitle
 {
-    self.nameLabel.text=project.name;
-    [self.iconImageView setImageWithURL:[NSURL URLWithString:project.iconAddress] ];
-    self.state.text=project.state;
+    self.titleLabel.text=title;
+    self.subtitle.text=subTitle;
+}
+
+-(void) setCellWithExperience:(Experience *)ex
+{
+    [self setCellWithTitle:[NSString stringWithFormat:@"%d",ex.year] andSubtitle:ex.event];
 }
 
 @end
