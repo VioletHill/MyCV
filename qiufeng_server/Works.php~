@@ -1,0 +1,14 @@
+<?php
+	header("Content-type: text/html;charset=utf8");
+    require_once ('WorksDao.php');	   				
+
+    $worksArray=WorksDao::sharedWorksDao()->getAllData();
+    echo "中";
+    for ($i=0; $i<=(count($worksArray)); $i++)
+    {
+        $item=$worksArray[$i];
+        echo  utf8_encode($item->getName());
+    }
+
+?>
+

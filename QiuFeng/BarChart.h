@@ -6,6 +6,8 @@
 //  Copyright (c) 2014 TongjiUniversity. All rights reserved.
 //
 
+//for vinago test
+
 #import <UIKit/UIKit.h>
 
 @class BarChart;
