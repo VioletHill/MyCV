@@ -7,6 +7,8 @@
 //
 //for test  by vinago
 
+//for vinago test
+
 #import <UIKit/UIKit.h>
 
 @class BarChart;
