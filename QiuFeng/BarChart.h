@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 TongjiUniversity. All rights reserved.
 //
 
-//for vinago test
+//for vin2o test 
 
 #import <UIKit/UIKit.h>
 
