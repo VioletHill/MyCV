@@ -7,7 +7,11 @@
 //
 //for test  by vinago
 
-//for vinago test
+<<<<<<< HEAD
+//for vinagaaaao test
+=======
+//for vin2o test 
+>>>>>>> 2a9790cb9dcbaab810215e5003191f0c0f29395e
 
 #import <UIKit/UIKit.h>
 
